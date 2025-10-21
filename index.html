@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minufood - Distribución de Alimentos y Bebidas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .mining-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Header -->
+    <header class="gradient-bg mining-pattern text-white shadow-lg">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <div class="bg-white p-3 rounded-full">
+                        <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"/>
+                            <path d="M8 11h8v2H8z"/>
+                            <path d="M10 7h4v2h-4z"/>
+                            <path d="M9 15h6v2H9z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-3xl text-gray-700 font-bold">MINUFOOD</h1>
+                        <p class="text-blue-300">Distribución Especializada</p>
+                    </div>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <button onclick="showSection('inicio')" class="nav-btn text-gray-600 font-bold px-4 py-2 rounded-lg hover:bg-black hover:bg-opacity-20 transition-all duration-200 border border-white border-opacity-30">Inicio</button>
+                    <button onclick="showSection('empresa')" class="nav-btn text-gray-600 font-bold px-4 py-2 rounded-lg hover:bg-black hover:bg-opacity-20 transition-all duration-200 border border-white border-opacity-30">Empresa</button>
+                    <button onclick="showSection('organigrama')" class="nav-btn text-gray-600 font-bold px-4 py-2 rounded-lg hover:bg-black hover:bg-opacity-20 transition-all duration-200 border border-white border-opacity-30">Organigrama</button>
+                    <button onclick="showSection('modelos')" class="nav-btn text-gray-600 font-bold px-4 py-2 rounded-lg hover:bg-black hover:bg-opacity-20 transition-all duration-200 border border-white border-opacity-30">Modelos Operativos</button>
+                    <button onclick="showSection('contacto')" class="nav-btn text-gray-600 font-bold px-4 py-2 rounded-lg hover:bg-black hover:bg-opacity-20 transition-all duration-200 border border-white border-opacity-30">Contacto</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-8">
+        <!-- Inicio Section -->
+        <section id="inicio" class="section-content">
+                <!-- Banner -->
+            <div class="w-full flex justify-center mb-12">
+                <img src="img/banner-1.jpg" 
+                    alt="Banner Minufood" 
+                    class="rounded-lg shadow-lg w-full max-w-5xl object-cover aspect-[16/9]">
+            </div>
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Distribución Confiable para el Sector Minero</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Garantizamos la distribución eficiente, oportuna y segura de alimentos y bebidas de marcas reconocidas hacia el sector minero en la provincia del Valle de Ubaté.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 7h-3V6a4 4 0 0 0-8 0v1H5a1 1 0 0 0-1 1v11a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8a1 1 0 0 0-1-1zM10 6a2 2 0 0 1 4 0v1h-4V6zm8 13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V9h2v1a1 1 0 0 0 2 0V9h4v1a1 1 0 0 0 2 0V9h2v10z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Marcas Reconocidas</h3>
+                    <p class="text-gray-600">Distribuimos productos de Postobón, Coca-Cola, Colombina y otras marcas líderes.</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Logística Confiable</h3>
+                    <p class="text-gray-600">Red logística especializada para garantizar entregas puntuales y seguras.</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Sector Minero</h3>
+                    <p class="text-gray-600">Especializados en atender las necesidades del sector minero en Valle de Ubaté.</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Objetivo General</h3>
+                <p class="text-gray-700 text-lg leading-relaxed text-center max-w-4xl mx-auto">
+                    Garantizar la distribución eficiente, oportuna y segura de alimentos y bebidas de marcas aliadas hacia el sector minero en la provincia del Valle de Ubaté, contribuyendo al bienestar de los trabajadores y al fortalecimiento de la cadena de suministro regional.
+                </p>
+            </div>
+        </section>
+
+        <!-- Empresa Section -->
+        <section id="empresa" class="section-content hidden">
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-4 flex items-center">
+                        <span class="text-3xl mr-3">🎯</span> Misión
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Somos una empresa dedicada a la distribución de alimentos y bebidas de reconocidas marcas en la provincia del Valle de Ubaté, Cundinamarca, orientada a atender el sector minero con un servicio eficiente, responsable y de calidad, garantizando la satisfacción de nuestros clientes y el bienestar de sus colaboradores.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h3 class="text-2xl font-bold text-purple-600 mb-4 flex items-center">
+                        <span class="text-3xl mr-3">🚀</span> Visión
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Para el año 2030 seremos la empresa líder en distribución de alimentos y bebidas en la región del Valle de Ubaté, reconocida por nuestra confiabilidad, eficiencia logística y compromiso con el desarrollo del sector minero y la comunidad.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Objetivos Específicos</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="border-l-4 border-blue-500 pl-4">
+                        <h4 class="font-semibold text-gray-800 mb-2">Red Logística</h4>
+                        <p class="text-gray-600 text-sm">Establecer una red logística confiable que asegure la entrega de productos en tiempo y forma a las zonas mineras.</p>
+                    </div>
+                    <div class="border-l-4 border-green-500 pl-4">
+                        <h4 class="font-semibold text-gray-800 mb-2">Alianzas Estratégicas</h4>
+                        <p class="text-gray-600 text-sm">Optimizar los procesos de contratación y alianzas estratégicas con proveedores y clientes para garantizar relaciones sostenibles.</p>
+                    </div>
+                    <div class="border-l-4 border-yellow-500 pl-4">
+                        <h4 class="font-semibold text-gray-800 mb-2">Gestión Financiera</h4>
+                        <p class="text-gray-600 text-sm">Implementar prácticas financieras responsables que aseguren la sostenibilidad y rentabilidad de la empresa.</p>
+                    </div>
+                    <div class="border-l-4 border-red-500 pl-4">
+                        <h4 class="font-semibold text-gray-800 mb-2">Estándares de Calidad</h4>
+                        <p class="text-gray-600 text-sm">Mantener altos estándares de calidad en el manejo, transporte y conservación de los productos distribuidos.</p>
+                    </div>
+                    <div class="border-l-4 border-purple-500 pl-4">
+                        <h4 class="font-semibold text-gray-800 mb-2">Crecimiento Regional</h4>
+                        <p class="text-gray-600 text-sm">Desarrollar estrategias de crecimiento y posicionamiento en la región para ampliar la cobertura y competitividad.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Organigrama Section -->
+        <section id="organigrama" class="section-content hidden">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Organigrama Empresarial</h2>
+                <p class="text-gray-600">Estructura organizacional de MinuFood S.A.S</p>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <!-- Company Title -->
+                <div class="text-center mb-12">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-2">MinuFood S.A.S</h3>
+                    <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+                </div>
+
+                <!-- Director General -->
+                <div class="flex justify-center mb-8">
+                    <div class="bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg p-6 shadow-lg max-w-xs text-center">
+                        <div class="bg-white bg-opacity-20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                            </svg>
+                        </div>
+                        <h4 class="font-bold text-lg mb-1">Manuel Santiago</h4>
+                        <p class="text-blue-100 font-semibold mb-1">Director General</p>
+                        <p class="text-blue-200 text-sm">📍 Sutatausa</p>
+                    </div>
+                </div>
+
+                <!-- Connection Line -->
+                <div class="flex justify-center mb-8">
+                    <div class="w-1 h-12 bg-gray-300"></div>
+                </div>
+
+                <!-- Departments -->
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Finanzas -->
+                    <div class="text-center">
+                        <div class="bg-gradient-to-r from-green-500 to-green-600 text-white rounded-lg p-6 shadow-lg">
+                            <div class="bg-white bg-opacity-20 rounded-full w-14 h-14 flex items-center justify-center mx-auto mb-3">
+                                <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/>
+                                </svg>
+                            </div>
+                            <h4 class="font-bold text-lg mb-1">Andrés David</h4>
+                            <p class="text-green-100 font-semibold mb-1">FINANZAS</p>
+                            <p class="text-green-200 text-sm">📍 Carmen de Carupa</p>
+                        </div>
+                    </div>
+
+                    <!-- Logística -->
+                    <div class="text-center">
+                        <div class="bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-lg p-6 shadow-lg">
+                            <div class="bg-white bg-opacity-20 rounded-full w-14 h-14 flex items-center justify-center mx-auto mb-3">
+                                <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+                                </svg>
+                            </div>
+                            <h4 class="font-bold text-lg mb-1">Manuel Santiago</h4>
+                            <p class="text-purple-100 font-semibold mb-1">LOGÍSTICA</p>
+                            <p class="text-purple-200 text-sm">📍 Sutatausa</p>
+                        </div>
+                    </div>
+
+                    <!-- Contratación -->
+                    <div class="text-center">
+                        <div class="bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-lg p-6 shadow-lg">
+                            <div class="bg-white bg-opacity-20 rounded-full w-14 h-14 flex items-center justify-center mx-auto mb-3">
+                                <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A1.5 1.5 0 0 0 18.54 8H17c-.8 0-1.54.37-2.01.99l-2.98 3.93-.69-.69A1.5 1.5 0 0 0 10.26 12H6c-.83 0-1.5.67-1.5 1.5S5.17 15 6 15h3.5l1.5 1.5c.39.39 1.02.39 1.41 0L16 13v9h4z"/>
+                                </svg>
+                            </div>
+                            <h4 class="font-bold text-lg mb-1">Adner Santiago</h4>
+                            <p class="text-orange-100 font-semibold mb-1">CONTRATACIÓN</p>
+                            <p class="text-orange-200 text-sm">📍 Carmen de Carupa</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Modelos Section -->
+        <section id="modelos" class="section-content hidden">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4 text-center">Modelos Operativos</h2>
+                <p class="text-gray-600 text-center mb-8">Conoce nuestros sistemas de gestión y operación</p>
+                
+                <div class="flex justify-center mb-8">
+                    <div class="bg-white rounded-lg shadow-lg p-2 flex">
+                        <button onclick="showModel('phva')" id="phva-tab" class="model-tab px-6 py-3 rounded-lg font-semibold bg-blue-600 text-white">Modelo PHVA</button>
+                        <button onclick="showModel('pod')" id="pod-tab" class="model-tab px-6 py-3 rounded-lg font-semibold text-gray-600 hover:bg-gray-100">Modelo PODC</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PHVA Model -->
+            <div id="phva-model" class="model-content">
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-6 text-center">Modelo PHVA (Planificar-Hacer-Verificar-Actuar)</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full border-collapse">
+                            <thead>
+                                <tr class="bg-blue-50">
+                                    <th class="border border-gray-300 px-4 py-3 text-left font-semibold text-gray-800">FASE</th>
+                                    <th class="border border-gray-300 px-4 py-3 text-left font-semibold text-gray-800">ACTIVIDADES</th>
+                                    <th class="border border-gray-300 px-4 py-3 text-left font-semibold text-gray-800">DÍA</th>
+                                    <th class="border border-gray-300 px-4 py-3 text-left font-semibold text-gray-800">RESPONSABLE</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="border border-gray-300 px-4 py-3 font-semibold text-blue-600">P – PLANIFICAR</td>
+                                    <td class="border border-gray-300 px-4 py-3 text-sm">
+                                        • Programar recogida semanal de mercancía cada miércoles<br>
+                                        • Asignar siempre el vehículo de mayor capacidad de carga para la recogida<br>
+                                        • Confirmar pedidos con proveedores el lunes o martes<br>
+                                        • Revisar inventario el martes para definir cantidades de reposición<br>
+                                        • Programar mantenimiento del segundo camión
+                                    </td>
+                                    <td class="border border-gray-300 px-4 py-3 text-sm">Lunes y martes (planificación)<br>Miércoles (ejecución de recogida)</td>
+                                    <td class="border border-gray-300 px-4 py-3 text-sm">Administrador / Jefe de logística</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="border border-gray-300 px-4 py-3 font-semibold text-green-600">H – HACER</td>
+                                    <td class="border border-gray-300 px-4 py-3 text-sm">
+                                        • Salida del camión de mayor capacidad el miércoles para recoger mercancía<br>
+                                        • Recibir, verificar y registrar mercancía en bodega<br>
+                                        • Realizar mantenimiento preventivo básico al camión que quedó en bodega<br>
+                                        • Realizar entregas en las minas según la planificación<br>
+                                        • Registrar consumo de combustible, tiempos de salida/llegada
+                                    </td>
+                                    <td class="border border-gray-300 px-4 py-3 text-sm">Miércoles (recogida)<br>Jueves a martes (entregas)</td>
+                                    <td class="border border-gray-300 px-4 py-3 text-sm">Conductores / Personal de bodega / Jefe de logística</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="border border-gray-300 px-4 py-3 font-semibold text-yellow-600">V – VERIFICAR</td>
+                                    <td class="border border-gray-300 px-4 py-3 text-sm">
+                                        • Confirmar que toda la mercancía fue recogida con el vehículo de mayor capacidad<br>
+                                        • Comparar inventario físico con el registro en el sistema/Excel<br>
+                                        • Verificar cumplimiento de entregas (puntualidad, productos correctos)<br>
+                                        • Analizar desempeño de ambos camiones
+                                    </td>
+                                    <td class="border border-gray-300 px-4 py-3 text-sm">Semanal</td>
+                                    <td class="border border-gray-300 px-4 py-3 text-sm">Administrador / Jefe de logística</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="border border-gray-300 px-4 py-3 font-semibold text-red-600">A – ACTUAR</td>
+                                    <td class="border border-gray-300 px-4 py-3 text-sm">
+                                        • Ajustar cantidad de compra para la próxima semana según el consumo real<br>
+                                        • Corregir errores en inventario o mejorar método de registro<br>
+                                        • Planificar mantenimiento mayor si se detectaron fallas mecánicas
+                                    </td>
+                                    <td class="border border-gray-300 px-4 py-3 text-sm">Semanal / Mensual</td>
+                                    <td class="border border-gray-300 px-4 py-3 text-sm">Administrador / Mantenimiento</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- POD Model -->
+            <div id="pod-model" class="model-content hidden">
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h3 class="text-2xl font-bold text-purple-600 mb-6 text-center">Modelo PODC (Planear-Organizar-Dirigir-Controlar)</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full border-collapse">
+                            <thead>
+                                <tr class="bg-purple-50">
+                                    <th class="border border-gray-300 px-4 py-3 text-left font-semibold text-gray-800">FASE</th>
+                                    <th class="border border-gray-300 px-4 py-3 text-left font-semibold text-gray-800">ACTIVIDADES</th>
+                                    <th class="border border-gray-300 px-4 py-3 text-left font-semibold text-gray-800">DÍA / FRECUENCIA</th>
+                                    <th class="border border-gray-300 px-4 py-3 text-left font-semibold text-gray-800">RESPONSABLE</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="border border-gray-300 px-4 py-3 font-semibold text-blue-600">P – PLANEAR</td>
+                                    <td class="border border-gray-300 px-4 py-3 text-sm">
+                                        • Revisar pedidos y confirmar cantidades con proveedores<br>
+                                        • Programar recogida de mercancía los miércoles con el vehículo de mayor capacidad<br>
+                                        • Programar mantenimiento preventivo para el camión que no sale a recoger
+                                    </td>
+                                    <td class="border border-gray-300 px-4 py-3 text-sm">Lunes y martes (planificación semanal)</td>
+                                    <td class="border border-gray-300 px-4 py-3 text-sm">Administrador / Jefe de logística</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="border border-gray-300 px-4 py-3 font-semibold text-green-600">O – ORGANIZAR</td>
+                                    <td class="border border-gray-300 px-4 py-3 text-sm">
+                                        • Asignar al conductor responsable del camión de mayor capacidad<br>
+                                        • Preparar espacio en bodega para recibir mercancía<br>
+                                        • Distribuir tareas en bodega (carga, descarga, registro)
+                                    </td>
+                                    <td class="border border-gray-300 px-4 py-3 text-sm">Martes (antes de la recogida)</td>
+                                    <td class="border border-gray-300 px-4 py-3 text-sm">Administrador / Personal de bodega</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="border border-gray-300 px-4 py-3 font-semibold text-yellow-600">D – DIRIGIR</td>
+                                    <td class="border border-gray-300 px-4 py-3 text-sm">
+                                        • Supervisar la salida del camión los miércoles para la recogida<br>
+                                        • Dar instrucciones claras al conductor y personal de bodega<br>
+                                        • Atender imprevistos: pedidos urgentes, retrasos, cambios de ruta
+                                    </td>
+                                    <td class="border border-gray-300 px-4 py-3 text-sm">Miércoles y durante operaciones</td>
+                                    <td class="border border-gray-300 px-4 py-3 text-sm">Administrador / Jefe de logística</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="border border-gray-300 px-4 py-3 font-semibold text-red-600">C – CONTROLAR</td>
+                                    <td class="border border-gray-300 px-4 py-3 text-sm">
+                                        • Verificar que la mercancía recogida coincida con los pedidos<br>
+                                        • Revisar inventario y detectar faltantes o sobrantes<br>
+                                        • Confirmación de entregas (puntualidad, productos correctos)<br>
+                                        • Evaluar consumo de combustible, desempeño de camiones y costos semanales<br>
+                                        • Tomar decisiones correctivas si hubo fallas o retrasos
+                                    </td>
+                                    <td class="border border-gray-300 px-4 py-3 text-sm">Semanal (después de la última entrega)</td>
+                                    <td class="border border-gray-300 px-4 py-3 text-sm">Administrador / Jefe de logística</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto Section -->
+        <section id="contacto" class="section-content hidden">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Contáctanos</h2>
+                <p class="text-gray-600">Estamos aquí para atender tus necesidades de distribución</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h3 class="text-xl font-bold text-gray-800 mb-6">Información de Contacto</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Ubicación</h4>
+                                <p class="text-gray-600">Valle de Ubaté, Cundinamarca</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-green-100 p-3 rounded-full mr-4">
+                                <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Teléfono</h4>
+                                <p class="text-gray-600">Próximamente</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                <svg class="w-6 h-6 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Email</h4>
+                                <p class="text-gray-600">info@minufood.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h3 class="text-xl font-bold text-gray-800 mb-6">Envíanos un Mensaje</h3>
+                    <form onsubmit="handleContactForm(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Nombre</label>
+                            <input type="text" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Email</label>
+                            <input type="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Mensaje</label>
+                            <textarea rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-8 mt-16">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex items-center justify-center mb-4">
+                <div class="bg-white p-2 rounded-full mr-3">
+                    <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold">MINUFOOD</h3>
+            </div>
+            <p class="text-blue-100 mb-4">Distribución especializada para el sector minero</p>
+            <p class="text-blue-200 text-sm">&copy; 2025 Minufood. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showSection(sectionName) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section-content');
+            sections.forEach(section => section.classList.add('hidden'));
+            
+            // Show selected section
+            document.getElementById(sectionName).classList.remove('hidden');
+            
+            // Update navigation
+            const navButtons = document.querySelectorAll('.nav-btn');
+            navButtons.forEach(btn => {
+                btn.classList.remove('bg-blue-300', 'bg-opacity-80');
+            });
+            event.target.classList.add('bg-blue-300', 'bg-opacity-80');
+        }
+
+        function showModel(modelName) {
+            // Hide all models
+            const models = document.querySelectorAll('.model-content');
+            models.forEach(model => model.classList.add('hidden'));
+            
+            // Show selected model
+            document.getElementById(modelName + '-model').classList.remove('hidden');
+            
+            // Update tabs
+            const tabs = document.querySelectorAll('.model-tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('bg-blue-600', 'text-white');
+                tab.classList.add('text-gray-600', 'hover:bg-gray-100');
+            });
+            
+            document.getElementById(modelName + '-tab').classList.remove('text-gray-600', 'hover:bg-gray-100');
+            document.getElementById(modelName + '-tab').classList.add('bg-blue-600', 'text-white');
+        }
+
+        function handleContactForm(event) {
+            event.preventDefault();
+            alert('¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.');
+            event.target.reset();
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            showSection('inicio');
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98daa00b65baa4f2',t:'MTc2MDMxNDM0NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
