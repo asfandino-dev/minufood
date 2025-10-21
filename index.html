@@ -47,57 +47,49 @@
     <!-- Main Content -->
     <main class="container mx-auto px-6 py-8">
         <!-- Inicio Section -->
-        <section id="inicio" class="section-content">
-                <!-- Banner -->
-            <div class="w-full flex justify-center mb-12">
-                <img src="img/banner-1.jpg" 
-                    alt="Banner Minufood" 
-                    class="rounded-lg shadow-lg w-full max-w-5xl object-cover aspect-[16/9]">
-            </div>
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4">Distribución Confiable para el Sector Minero</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Garantizamos la distribución eficiente, oportuna y segura de alimentos y bebidas de marcas reconocidas hacia el sector minero en la provincia del Valle de Ubaté.</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8 mb-12">
-                <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
-                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M19 7h-3V6a4 4 0 0 0-8 0v1H5a1 1 0 0 0-1 1v11a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8a1 1 0 0 0-1-1zM10 6a2 2 0 0 1 4 0v1h-4V6zm8 13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V9h2v1a1 1 0 0 0 2 0V9h4v1a1 1 0 0 0 2 0V9h2v10z"/>
-                        </svg>
+        <section id="inicio" class="section-content relative">
+            <!-- Carrusel -->
+            <div class="relative w-[95%] mx-auto overflow-hidden rounded-2xl shadow-xl mb-16 max-w-7xl">
+                <!-- Contenedor de imágenes -->
+                <div id="bannerSlider" class="flex transition-transform duration-700 ease-in-out">
+                    <!-- Slide 1 -->
+                    <div class="relative w-full flex-shrink-0">
+                        <img src="img/banner-1.jpg" alt="Banner 1" class="w-full h-[500px] md:h-[600px] object-cover">
+                        <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center text-white p-6">
+                            <h2 class="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">Distribución Confiable</h2>
+                            <p class="text-lg md:text-xl max-w-3xl">Llevamos los mejores productos al sector minero con eficiencia y compromiso.</p>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Marcas Reconocidas</h3>
-                    <p class="text-gray-600">Distribuimos productos de Postobón, Coca-Cola, Colombina y otras marcas líderes.</p>
+
+                    <!-- Slide 2 -->
+                    <div class="relative w-full flex-shrink-0">
+                        <img src="img/banner-2.jpg" alt="Banner 2" class="w-full h-[500px] md:h-[600px] object-cover">
+                        <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center text-white p-6">
+                            <h2 class="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">Eficiencia y Puntualidad</h2>
+                            <p class="text-lg md:text-xl max-w-3xl">Entregas a tiempo en los puntos más exigentes de la industria minera.</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="relative w-full flex-shrink-0">
+                        <img src="img/banner-3.jpg" alt="Banner 3" class="w-full h-[500px] md:h-[600px] object-cover">
+                        <div class="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center text-white p-6">
+                            <h2 class="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">Confianza y Calidad</h2>
+                            <p class="text-lg md:text-xl max-w-3xl">Trabajamos con las mejores marcas para garantizar tu abastecimiento.</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
-                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Logística Confiable</h3>
-                    <p class="text-gray-600">Red logística especializada para garantizar entregas puntuales y seguras.</p>
-                </div>
-
-                <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
-                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Sector Minero</h3>
-                    <p class="text-gray-600">Especializados en atender las necesidades del sector minero en Valle de Ubaté.</p>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-lg shadow-lg p-8">
-                <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Objetivo General</h3>
-                <p class="text-gray-700 text-lg leading-relaxed text-center max-w-4xl mx-auto">
-                    Garantizar la distribución eficiente, oportuna y segura de alimentos y bebidas de marcas aliadas hacia el sector minero en la provincia del Valle de Ubaté, contribuyendo al bienestar de los trabajadores y al fortalecimiento de la cadena de suministro regional.
-                </p>
+                <!-- Flechas -->
+                <button id="prevBtn" class="absolute top-1/2 left-4 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition">
+                    &#10094;
+                </button>
+                <button id="nextBtn" class="absolute top-1/2 right-4 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition">
+                    &#10095;
+                </button>
             </div>
         </section>
+
 
         <!-- Empresa Section -->
         <section id="empresa" class="section-content hidden">
@@ -461,6 +453,29 @@
     </footer>
 
     <script>
+        const slider = document.getElementById('bannerSlider');
+        const total = slider.children.length;
+        let index = 0;
+
+        function showSlide(i) {
+            slider.style.transform = `translateX(-${i * 100}%)`;
+        }
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            index = (index + 1) % total;
+            showSlide(index);
+        });
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            index = (index - 1 + total) % total;
+            showSlide(index);
+        });
+
+        // Auto movimiento
+        setInterval(() => {
+            index = (index + 1) % total;
+            showSlide(index);
+        }, 5000);
         function showSection(sectionName) {
             // Hide all sections
             const sections = document.querySelectorAll('.section-content');
